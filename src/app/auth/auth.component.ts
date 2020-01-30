@@ -32,10 +32,10 @@ export class AuthComponent {
           console.log(resData);
           this.isLoading = false;
         },
-        error => {
-          console.log(error);
+        errorMessage => {
+          console.log(errorMessage);
           this.isLoading = false;
-          this.error = 'ERROR !!!';
+          this.error = errorMessage;
         }
       );
     }
