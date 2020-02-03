@@ -10,7 +10,7 @@ import { Subscription } from "rxjs";
 })
 export class HeaderComponent implements OnInit, OnDestroy {
   isAuthenticated = false;
-  
+
   private userSub: Subscription;
 
   constructor(
@@ -34,5 +34,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   onFetchData() {
     this.dataStorageService.fetchRecipes().subscribe();
+  }
+
+  onLogout() {
+    this.authService.logout();
   }
 }
